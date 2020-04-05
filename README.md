@@ -1,5 +1,3 @@
 # SCPDiscordBotOnline
-It DiscordBot for game SCP Secret Labotory he show online counter 
-======
-# Setting Bot
-[Install Bot](https://github.com/s3rxio/SCPDiscordBotOnline/releases)
+Это бот для показа количества игроков на сервере игры SCP:SL!
+----
