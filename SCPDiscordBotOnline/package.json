@@ -1,0 +1,16 @@
+{
+    "name": "scpdiscordbotonline",
+    "version": "0.0.1",
+    "description": "Fucking online bot for game with fucking bad api",
+    "main": "index.js",
+    "scripts": {
+        "test": "node ./"
+    },
+    "author": "S3rxio && TailRed#1001",
+    "license": "ISC",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "discord.js": "^12.1.1",
+        "node-fetch": "^2.6.0"
+    }
+}
