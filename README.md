@@ -50,8 +50,11 @@ Functional
 ---------------------
 
 Showing the number of players in bot status
+
 ![alt-statuscount](https://kindtech.ru/img/github/Count.png)
+
 Command `Info @Server#0000`
+
 ![alt-commandimg](https://kindtech.ru/img/github/Info.png)
 
 Настройка
