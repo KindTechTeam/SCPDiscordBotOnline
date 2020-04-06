@@ -25,7 +25,7 @@ SCPDiscordBotOnline
  * вместо BotPrefix вписывай свой префикс бота(Желательно чтобы префикс был не таким как у публичных ботов)
  * вместо ServerIP вписывай IP Своего сервера
  * вместо PORT вписывай порт сервера
-```json
+```js
 {
     "token": "BotToken",
     "prefix": "BotPrefix",
