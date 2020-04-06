@@ -7,8 +7,10 @@ SCPDiscordBotOnline
 ---------------------
 
 Показ количества игроков в статусе бота
+
 ![alt-statuscount](https://kindtech.ru/img/github/Count.png)
 Команда `Info @Server#0000`
+
 ![alt-commandimg](https://kindtech.ru/img/github/Info.png)
 
 Настройка
