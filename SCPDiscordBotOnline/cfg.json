@@ -1,0 +1,8 @@
+{
+    "token": "BotToken",
+    "prefix": "BotPrefix",
+
+    "UpdateInterval": 1000,
+    "IP": "ServerIP",
+    "PORT": 7777
+}
