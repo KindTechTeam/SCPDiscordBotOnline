@@ -16,10 +16,10 @@ client.on('message', async message => {
         let data = await getonline();
         let emb = new MessageEmbed()
             .setTitle(`Server Info`)
-            .addField('IP:', `${data[2]}:${data[3]}`)
+            .addField('IP:', `${cfg.IP}:${cfg.PORT}`)
             .addField('Players Count:', `${data[0]}/${data[1]}`)
-            .addField('WhiteList:', data[4])
-            .addField('Frendly Fire:', data[5])
+            .addField('WhiteList:', data[2])
+            .addField('Frendly Fire:', data[3])
         message.channel.send(emb)
     }
 })
@@ -30,7 +30,7 @@ function getonline() {
             out = out.filter(r => r.ip === cfg.IP);
             out = out.filter(r => r.port === cfg.PORT);
             if (out[0])
-                resolve([parseInt(out[0].players.split("/")[0]), parseInt(out[0].players.split("/")[1]), out[0].ip, parseInt(out[0].port), out[0].whitelist, out[0].friendlyFire])
+                resolve([parseInt(out[0].players.split("/")[0]), parseInt(out[0].players.split("/")[1]), out[0].whitelist, out[0].friendlyFire])
             else resolve('ERROR')
         });
     });
@@ -46,7 +46,7 @@ client.on('ready', () => {
         let data = await getonline();
         if (typeof data === 'string') {
             client.user.setActivity(`Server shutdown`, { type: "WATCHING" });
-            client.user.setPresense({ status: "dnd" })
+            client.user.setPresence({ status: "dnd" })
             return console.log(`ERROR! SERVER NOT FOUND - SERVER NOT FOUND - SERVER NOT FOUND - SERVER NOT FOUND`.red, `IP: ${cfg.IP}:${cfg.PORT} check he is online?!`.red)
         }
         let online = `${data[0]}`.green;
