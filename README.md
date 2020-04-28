@@ -20,19 +20,29 @@ SCPDiscordBotOnline
  * Выбери Бота.
  * Зайди в пункт Bot.
  * Copy Token.
-2. Открой файл cfg.json и: 
- * вместо BotToken вписывай свой
- * вместо BotPrefix вписывай свой префикс бота(Желательно чтобы префикс был не таким как у публичных ботов)
- * вместо ServerIP вписывай IP Своего сервера
- * вместо PORT вписывай порт сервера
+
+| Option | Type | Description |
+| ------ | ------ | ------ |
+| token | string | Токен Бота |
+| prefix | string | Префикс бота. Пример: `;` |
+| ApiKey | string | API Ключ. Впиши `!api` в твою консоль сервера |
+| AccountID | int | Твой AccontID [ServerList](https://servers.scpslgame.com/) |
+| ServerID | int | Айди твоего сервера. Нати можно в [ServerList](https://servers.scpslgame.com/) |
+| IP | string | Айпи Твоего сервера |
+| PORT | string | Порт Твоего сервера |
+Пример:
 ```js
 {
-    "token": "BotToken",
-    "prefix": "BotPrefix",
+    "token": "P9T83R87WGTUICGSIUgdPIHIoiugo87go8g778G87gUYF",
+    "prefix": ";",
 
-    "UpdateInterval": 1000,
-    "IP": "ServerIP",
-    "PORT": 7777
+
+    "ApiKey": "As32AGdi1278yAIAD7a2",
+    "AccounID": "6666",
+    "ServerID": 6666,
+
+    "IP": "192.168.123.24",
+    "PORT": "7777"
 }
 ```
 3. Запускаем файл `start.bat`
@@ -63,19 +73,30 @@ Command `Info @Server#0000`
  * Choose a bot.
  * Go to Bot.
  * Copy Token.
-2. Open file cfg.json and: 
- * instead of BotToken enter your
- * instead of BotPrefix, enter your bot prefix (It is desirable that the prefix is ​​not the same as public bots)
- * instead of ServerIP enter the IP of your server
- * instead of PORT enter the server port
+ 
+
+| Option | Type | Description |
+| ------ | ------ | ------ |
+| token | string | Token Bot |
+| prefix | string | Bot prefix. Example: `;` |
+| ApiKey | string | API Key. Enter !api in your server console |
+| AccountID | int | Your AccontID. Can be in [ServerList](https://servers.scpslgame.com/) |
+| ServerID | int | Your ServerID. Can be in [ServerList](https://servers.scpslgame.com/) |
+| IP | string | IP of your server |
+| PORT | string | Port of your server |
+Explame:
 ```js
 {
-    "token": "BotToken",
-    "prefix": "BotPrefix",
+    "token": "P9T83R87WGTUICGSIUgdPIHIoiugo87go8g778G87gUYF",
+    "prefix": ";",
 
-    "UpdateInterval": 1000,
-    "IP": "ServerIP",
-    "PORT": 7777
+
+    "ApiKey": "As32AGdi1278yAIAD7a2",
+    "AccounID": "6666",
+    "ServerID": 6666,
+
+    "IP": "192.168.123.24",
+    "PORT": "7777"
 }
 ```
 3. Start file `start.bat`
