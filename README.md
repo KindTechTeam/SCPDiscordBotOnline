@@ -30,7 +30,7 @@ SCPDiscordBotOnline
 | ServerID | int | Айди твоего сервера. Нати можно в [ServerList](https://servers.scpslgame.com/) |
 | IP | string | Айпи Твоего сервера |
 | PORT | string | Порт Твоего сервера |
-Пример:
+## Пример:
 ```js
 {
     "token": "P9T83R87WGTUICGSIUgdPIHIoiugo87go8g778G87gUYF",
@@ -84,7 +84,7 @@ Command `Info @Server#0000`
 | ServerID | int | Your ServerID. Can be in [ServerList](https://servers.scpslgame.com/) |
 | IP | string | IP of your server |
 | PORT | string | Port of your server |
-Explame:
+## Explame:
 ```js
 {
     "token": "P9T83R87WGTUICGSIUgdPIHIoiugo87go8g778G87gUYF",
