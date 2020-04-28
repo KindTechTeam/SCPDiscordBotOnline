@@ -67,7 +67,7 @@ Command `Info @Server#0000`
 
 ![alt-commandimg](https://kindtech.ru/img/github/Info.png)
 
-Настройка
+Settings
 ---------------------
 1. We need to get the bot token in [Discord Developer Portal](https://discordapp.com/developers/applications)
  * Choose a bot.
