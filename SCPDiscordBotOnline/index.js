@@ -3,34 +3,41 @@ console.log("========Modules Loading========".bgGreen);
 
 let { Client, MessageEmbed } = require("discord.js");
 const client = new Client();
+let fs = require('fs')
 let fetch = require("node-fetch");
 console.log("Modules Loaded!".green);
 
 let cfg = require("./cfg.json");
-if (cfg.ip === "", cfg.port) return console.log("Config WARNING!".bgRed);;
 console.log("Config Loaded!".green);
 console.log("========End========".bgRed);
 
 client.on('message', async message => {
     if (message.content.startsWith(`${cfg.prefix}info`) && message.content.includes(client.user.id)) {
-        let data = await getonline();
+        let data = require('./cache.json');
         let emb = new MessageEmbed()
             .setTitle(`Server Info`)
             .addField('IP:', `${cfg.IP}:${cfg.PORT}`)
-            .addField('Players Count:', `${data[0]}/${data[1]}`)
-            .addField('WhiteList:', data[2])
-            .addField('Frendly Fire:', data[3])
+            .addField('Players Count:', `${data.Players}`)
+            .addField('WhiteList:', data.WL)
+            .addField('Frendly Fire:', data.FF)
+            .addField('Modded:', data.Modded)
+            .addField('Version:', data.Version)
         message.channel.send(emb)
     }
-})
+});
 
 function getonline() {
     return new Promise((resolve, reject) => {
-        fetch('https://api.scpslgame.com/lobbylist.php?format=json').then(res => res.json()).then(out => {
-            out = out.filter(r => r.ip === cfg.IP);
-            out = out.filter(r => r.port === cfg.PORT);
+        fetch(`https://api.scpslgame.com/serverinfo.php?id=${cfg.AccountID}&key=${cfg.ApiKey}&players=true&version=true&flags=true`).then(res => res.json()).then(out => {
+            out = out.Servers;
+            
+            out = out.filter(r => r.ID === cfg.ServerID);
+            out = out.filter(r => r.Port === cfg.PORT);
+
+            fs.writeFileSync('./cache.json', JSON.stringify(out[0]))
+            
             if (out[0])
-                resolve([parseInt(out[0].players.split("/")[0]), parseInt(out[0].players.split("/")[1]), out[0].whitelist, out[0].friendlyFire])
+                resolve([parseInt(out[0].Players.split("/")[0]), parseInt(out[0].Players.split("/")[1]), out[0].WL, out[0].FF, out[0].Modded, out[0].Version])
             else resolve('ERROR')
         });
     });
@@ -61,7 +68,7 @@ client.on('ready', () => {
             console.log(`[${timeConverter(Date.now())}]`.green, "» ".magenta, `Current online » ${online}/${max}`.cyan)
         } else
             client.user.setActivity(`Server not found`)
-    }, cfg.UpdateInterval)
+    }, 20000)
 });
 client.login(cfg.token);
 
