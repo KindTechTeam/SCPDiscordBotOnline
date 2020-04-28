@@ -26,7 +26,7 @@ SCPDiscordBotOnline
 | token | string | Токен Бота |
 | prefix | string | Префикс бота. Пример: `;` |
 | ApiKey | string | API Ключ. Впиши `!api` в твою консоль сервера |
-| AccountID | int | Твой AccontID [ServerList](https://servers.scpslgame.com/) |
+| AccountID | int | Твой AccontID Нати можно в [ServerList](https://servers.scpslgame.com/) |
 | ServerID | int | Айди твоего сервера. Нати можно в [ServerList](https://servers.scpslgame.com/) |
 | IP | string | Айпи Твоего сервера |
 | PORT | string | Порт Твоего сервера |
