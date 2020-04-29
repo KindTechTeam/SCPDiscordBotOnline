@@ -23,26 +23,29 @@ SCPDiscordBotOnline
 
 | Option | Type | Description |
 | ------ | ------ | ------ |
-| token | string | Токен Бота |
+| tokens | array | Токены Ботов |
 | prefix | string | Префикс бота. Пример: `;` |
 | ApiKey | string | API Ключ. Впиши `!api` в твою консоль сервера |
 | AccountID | int | Твой AccontID Нати можно в [ServerList](https://servers.scpslgame.com/) |
-| ServerID | int | Айди твоего сервера. Нати можно в [ServerList](https://servers.scpslgame.com/) |
 | IP | string | Айпи Твоего сервера |
-| PORT | string | Порт Твоего сервера |
+| PORTS | array | Порты ваших сервера |
 ## Пример:
 ```js
 {
-    "token": "P9T83R87WGTUICGSIUgdPIHIoiugo87go8g778G87gUYF",
+    "tokens": [
+        "NTYzNzA3NAGVADA5NTA2ODI2.SoSi.XuYImWKun-gfaJl7qF2r7_842Ww",
+        "NTc5MjI4MAGVADM2NzI3Mjk3.NaHy.InIdIopjs9BGJiu-gyA0a9rWBog",
+        "NzA1MTI5NAGVAzQ0ODI0OTc2.SoSA.TMChLENDwJ_asr-e5N-zCam52Uk",
+        "NzA1MTI5OAGVATQyMTkxMjA1.MNewL.ENxChbOTOdPRiDyMIVaTuyuJKw",
+        "NzA1MTI5OAGVAzE1MDQyNDM0.AdР8С.E3AdCBG9SB1DAhDSkXt6bdv0ZY",
+        "NzA1MTI5OAGVAjMzNjIxNTQ1.GnaRh.pV5odWuVKbrKWAShKAhdjkACU"],
     "prefix": ";",
 
+    "ApiKey": "DaY69rubLeyPJ",
+    "AccountID": "14280",
 
-    "ApiKey": "As32AGdi1278yAIAD7a2",
-    "AccounID": "6666",
-    "ServerID": 6666,
-
-    "IP": "192.168.123.24",
-    "PORT": "7777"
+    "IP": "128.123.52.123",
+    "PORTS": ["7777", "7778", "7779", "7780", "7781", "7782"]
 }
 ```
 3. Запускаем файл `start.bat`
@@ -77,26 +80,29 @@ Settings
 
 | Option | Type | Description |
 | ------ | ------ | ------ |
-| token | string | Token Bot |
+| tokens | array | Bot Tokens |
 | prefix | string | Bot prefix. Example: `;` |
 | ApiKey | string | API Key. Enter !api in your server console |
 | AccountID | int | Your AccontID. Can be in [ServerList](https://servers.scpslgame.com/) |
-| ServerID | int | Your ServerID. Can be in [ServerList](https://servers.scpslgame.com/) |
 | IP | string | IP of your server |
-| PORT | string | Port of your server |
+| PORTS | array | Ports of your server |
 ## Explame:
 ```js
 {
-    "token": "P9T83R87WGTUICGSIUgdPIHIoiugo87go8g778G87gUYF",
+    "tokens": [
+        "NTYzNzA3NAGVADA5NTA2ODI2.SoSi.XuYImWKun-gfaJl7qF2r7_842Ww",
+        "NTc5MjI4MAGVADM2NzI3Mjk3.NaHy.InIdIopjs9BGJiu-gyA0a9rWBog",
+        "NzA1MTI5NAGVAzQ0ODI0OTc2.SoSA.TMChLENDwJ_asr-e5N-zCam52Uk",
+        "NzA1MTI5OAGVATQyMTkxMjA1.MNewL.ENxChbOTOdPRiDyMIVaTuyuJKw",
+        "NzA1MTI5OAGVAzE1MDQyNDM0.AdР8С.E3AdCBG9SB1DAhDSkXt6bdv0ZY",
+        "NzA1MTI5OAGVAjMzNjIxNTQ1.GnaRh.pV5odWuVKbrKWAShKAhdjkACU"],
     "prefix": ";",
 
+    "ApiKey": "DaY69rubLeyPJ",
+    "AccountID": "14280",
 
-    "ApiKey": "As32AGdi1278yAIAD7a2",
-    "AccounID": "6666",
-    "ServerID": 6666,
-
-    "IP": "192.168.123.24",
-    "PORT": "7777"
+    "IP": "128.123.52.123",
+    "PORTS": ["7777", "7778", "7779", "7780", "7781", "7782"]
 }
 ```
 3. Start file `start.bat`
