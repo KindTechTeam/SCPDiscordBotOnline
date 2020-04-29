@@ -28,7 +28,7 @@ SCPDiscordBotOnline
 | ApiKey | string | API Ключ. Впиши `!api` в твою консоль сервера |
 | AccountID | int | Твой AccontID Нати можно в [ServerList](https://servers.scpslgame.com/) |
 | IP | string | Айпи Твоего сервера |
-| PORTS | array | Порты ваших сервера |
+| PORTS | array | Порты ваших серверов |
 ## Пример:
 ```js
 {
@@ -85,7 +85,7 @@ Settings
 | ApiKey | string | API Key. Enter !api in your server console |
 | AccountID | int | Your AccontID. Can be in [ServerList](https://servers.scpslgame.com/) |
 | IP | string | IP of your server |
-| PORTS | array | Ports of your server |
+| PORTS | array | Ports of your servers |
 ## Explame:
 ```js
 {
