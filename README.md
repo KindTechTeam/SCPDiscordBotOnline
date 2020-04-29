@@ -12,7 +12,7 @@ SCPDiscordBotOnline
 
 Команда `Info @Server#0000`
 
-![alt-commandimg](https://kindtech.ru/img/github/Info.png)
+![alt-commandimg](https://kindtech.ru/img/github/command.png)
 
 Настройка
 ---------------------
@@ -68,7 +68,7 @@ Showing the number of players in bot status
 
 Command `Info @Server#0000`
 
-![alt-commandimg](https://kindtech.ru/img/github/Info.png)
+![alt-commandimg](https://kindtech.ru/img/github/command.png)
 
 Settings
 ---------------------
