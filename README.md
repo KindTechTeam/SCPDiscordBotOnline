@@ -12,7 +12,7 @@ SCPDiscordBotOnline
 
 Команда `Info @Server#0000`
 
-![alt-commandimg](https://kindtech.ru/img/github/Info.png)
+![alt-commandimg](https://kindtech.ru/img/github/Info.png/)
 
 Настройка
 ---------------------
