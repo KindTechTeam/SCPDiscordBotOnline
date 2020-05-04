@@ -1,12 +1,13 @@
 {
     "name": "scpdiscordbotonline",
-    "version": "0.0.2",
+    "version": "1.0.2",
     "description": "This is a bot for showing the number of players on the game server SCP: SL",
     "main": "index.js",
+    "bin": "bin.js",
     "scripts": {
         "test": "node ./"
     },
-    "author": "S3rxio#1337 && TailRed#1001",
+    "author": "S3rxio#1337",
     "license": "ISC",
     "dependencies": {
         "colors": "^1.4.0",
