@@ -48,7 +48,7 @@ SCPDiscordBotOnline
     "PORTS": ["7777", "7778", "7779", "7780", "7781", "7782"]
 }
 ```
-3. Запускаем файл `start.bat`
+3. Запускаем файл `start.bat` или если у вас Linux то вписываете в terminal `nodejs ./`
 4. Далее вы можете радоваться! Ведь ваш бот работает!)
 
 Надеюсь этот бот вам поможет и будет удобен для вас!)
@@ -105,7 +105,7 @@ Settings
     "PORTS": ["7777", "7778", "7779", "7780", "7781", "7782"]
 }
 ```
-3. Start file `start.bat`
+3. Start file `start.bat` or if you have Linux then type in terminal `nodejs ./`
 4. Then you can rejoice! After all, your bot works!)
 
 I hope this bot will help you and be convenient for you!)
