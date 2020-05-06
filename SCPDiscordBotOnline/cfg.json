@@ -1,13 +1,12 @@
 {
     "tokens": [
-        "BotToken",
-        "BotToken",
+        ""
     ],
-    "prefix": "Prefix",
+    "prefix": "",
 
-    "ApiKey": "ApiKey",
-    "AccountID": "AccountID",
+    "ApiKey": "",
+    "AccountID": "",
 
-    "IP": "YOURIP",
-    "PORTS": ["7777", "7778"]
+    "IP": "",
+    "PORTS": [""]
 }
