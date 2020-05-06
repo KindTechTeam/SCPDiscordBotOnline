@@ -3,6 +3,8 @@ SCPDiscordBotOnline
 
 Это бот для показа количества игроков на сервере игры SCP:SL!
 
+Support: https://sdbo.kindtech.ru/
+
 Функционал
 ---------------------
 
