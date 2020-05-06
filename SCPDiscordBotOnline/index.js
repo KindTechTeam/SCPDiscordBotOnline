@@ -12,6 +12,9 @@ let cfg = require("./cfg.json");
 console.log("Config Loaded!".green);
 console.log("========End========".bgRed);
 
+console.log("========Support========".bgCyan);
+console.log("Support: https://sdbo.kindtech.ru/".cyan)
+
 let clientConsole = {
     log: async (client, ...data) => {
         console.log(`[${client.user.id} | ${client.user.username}]`.magenta + `${data}`);
@@ -27,22 +30,22 @@ if(ports.length != tokens.length) {
     for(i = 0; i < 15; i++) {
         console.log(`Port length dont equal tokens length`.red);
     };
-    return process.exit();
+    process.exit();
 } else if (!cfg.ApiKey) {
     for (i = 0; i < 15; i++) {
         console.log(`Paste ApiKey in cfg.json`.red);
     };
-    return process.exit();
+    process.exit();
 } else if (!cfg.AccountID) {
     for (i = 0; i < 15; i++) {
         console.log(`Paste AccountID in cfg.json`.red);
     };
-    return process.exit();
+    process.exit();
 } else if (!cfg.IP) {
     for (i = 0; i < 15; i++) {
         console.log(`Paste IP in cfg.json`.red);
     };
-    return process.exit();
+    process.exit();
 };
 
 let clients = {};
@@ -64,19 +67,14 @@ ports.forEach((port, i) => {
                     data[0] = data[2]['Players'].split('/')[0];
                     data[1] = data[2]['Players'].split('/')[1];
                 } else {
-                    
                     for (i = 0; i < 15; i++) {
                         console.log("Server on? Players undefined!!!!!!!".red);
                 };
             };
 
-            if (typeof data === 'string') {
-                client.user.setActivity(`Server shutdown`, { type: "WATCHING" });
-                client.user.setPresence({ status: "dnd" });
-                return console.log(`ERROR! SERVER NOT FOUND - SERVER NOT FOUND - SERVER NOT FOUND - SERVER NOT FOUND`.red, `IP: ${cfg.IP}:${cfg.PORT} check he is online?!`.red);
-            };
             let online = `${data[0]}`.green;
             let max = `${data[1]}`.magenta;
+            
             if (online && max) {
                 if (parseInt(data[0]) != 0) {
                     client.user.setActivity(`за ${data[0]} игроками`, { type: "WATCHING" });
@@ -84,10 +82,12 @@ ports.forEach((port, i) => {
                     online = '0'.red;
                     client.user.setActivity(`Server is empty`, { type: "WATCHING" });
                 };
-            } else
-                client.user.setActivity(`Server not found`);
+            }
 
-            if(!data[2]['Players']) client.user.setActivity(`Server not found`); else console.log(`[${port}]`.green + ` Online: ${online}/${max}`.cyan);
+            if(!data[2]['Players'])  {
+                client.user.setActivity(`Server shutdown`, { type: "WATCHING" });
+                client.user.setPresence({ status: "dnd" });
+            } else console.log(`[${port}]`.green + ` Online: ${online}/${max}`.cyan);  
             };
         }, 5000);
     });
@@ -104,7 +104,7 @@ ports.forEach((port, i) => {
                     { name: 'Frendly Fire', value: data[port].FF },
                     { name: 'Modded', value: data[port].Modded },
                     { name: 'Version', value: data[port].Version }
-                )
+                );
                 
             message.channel.send(emb);
         };
