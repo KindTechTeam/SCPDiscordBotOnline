@@ -63,35 +63,32 @@ ports.forEach((port, i) => {
                 let cache = JSON.parse(fs.readFileSync('./cache.json'));
                 data = [];
                 data[2] = cache[port];
-                if(data[2]['Players']) {
+                if (data[2]['Players']) {
                     data[0] = data[2]['Players'].split('/')[0];
                     data[1] = data[2]['Players'].split('/')[1];
+
+                    let online = `${data[0]}`.green;
+                    let max = `${data[1]}`.magenta;
+
+                    if (online && max) {
+                        if (parseInt(data[0]) != 0) {
+                            client.user.setActivity(`за ${data[0]} игроками`, { type: "WATCHING" });
+                        } else {
+                            online = '0'.red;
+                            client.user.setActivity(`Server is empty`, { type: "WATCHING" });
+                        };
+                        console.log(`[${port}]`.green + ` Online: ${online}/${max}`.cyan);
+                    }
                 } else {
+                    client.user.setActivity(`Server not found`, { type: "WATCHING" });
+
                     for (i = 0; i < 15; i++) {
                         console.log("Server on? Players undefined!!!!!!!".red);
+                    };
                 };
             };
-
-            let online = `${data[0]}`.green;
-            let max = `${data[1]}`.magenta;
-            
-            if (online && max) {
-                if (parseInt(data[0]) != 0) {
-                    client.user.setActivity(`за ${data[0]} игроками`, { type: "WATCHING" });
-                } else {
-                    online = '0'.red;
-                    client.user.setActivity(`Server is empty`, { type: "WATCHING" });
-                };
-            }
-
-            if(!data[2]['Players'])  {
-                client.user.setActivity(`Server shutdown`, { type: "WATCHING" });
-                client.user.setPresence({ status: "dnd" });
-            } else console.log(`[${port}]`.green + ` Online: ${online}/${max}`.cyan);  
-            };
-        }, 5000);
-    });
-
+        }, 15000);
+    });  
     client.on('message', async message => {
         if (message.content.startsWith(`${cfg.prefix}info`) && message.content.includes(client.user.id)) {
             let data = JSON.parse(fs.readFileSync('./cache.json'));
@@ -124,4 +121,4 @@ function getonline() {
     });
 };
 
-setInterval(async()=>{await getonline();}, 18000);
+setInterval(async()=>{await getonline();}, 15000);
