@@ -14,7 +14,7 @@ Support: https://sdbo.kindtech.ru/
 
 Команда `Info @Server#0000`
 
-![alt-commandimg](https://i.imgur.com/M3FNNwJ)
+![alt-commandimg](https://i.imgur.com/M3FNNwJ.png)
 
 Настройка
 ---------------------
@@ -70,7 +70,7 @@ Showing the number of players in bot status
 
 Command `Info @Server#0000`
 
-![alt-commandimg](https://i.imgur.com/M3FNNwJ)
+![alt-commandimg](https://i.imgur.com/M3FNNwJ.png)
 
 Settings
 ---------------------
