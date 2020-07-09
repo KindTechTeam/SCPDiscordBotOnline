@@ -66,7 +66,7 @@ Functional
 
 Showing the number of players in bot status
 
-![alt-statuscount](https://i.imgur.com/pkCTSYx)
+![alt-statuscount](https://i.imgur.com/pkCTSYxl.png)
 
 Command `Info @Server#0000`
 
