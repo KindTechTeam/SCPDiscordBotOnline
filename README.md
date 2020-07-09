@@ -10,11 +10,11 @@ Support: https://sdbo.kindtech.ru/
 
 Показ количества игроков в статусе бота
 
-![alt-statuscount](https://imgur.com/pkCTSYx)
+![alt-statuscount](https://i.imgur.com/pkCTSYxl.png)
 
 Команда `Info @Server#0000`
 
-![alt-commandimg](https://imgur.com/M3FNNwJ)
+![alt-commandimg](https://i.imgur.com/M3FNNwJ)
 
 Настройка
 ---------------------
@@ -66,11 +66,11 @@ Functional
 
 Showing the number of players in bot status
 
-![alt-statuscount](https://imgur.com/pkCTSYx)
+![alt-statuscount](https://i.imgur.com/pkCTSYx)
 
 Command `Info @Server#0000`
 
-![alt-commandimg](https://imgur.com/M3FNNwJ)
+![alt-commandimg](https://i.imgur.com/M3FNNwJ)
 
 Settings
 ---------------------
