@@ -1,0 +1,21 @@
+{
+    "bot": {
+        "prefix": ";",
+        "command": "serverInfo"
+    },
+
+    "api": {
+        "key": " this is a secret key ",
+        "AccountID": " this is a account id "
+    },
+
+    "servers": {
+        "list": [
+            { "port": 7777, "token": "who are you?" }
+        ]
+    },
+
+    "logs": {
+        "FolderName": "logs"
+    }
+}
