@@ -11,7 +11,7 @@ process.on('exit', () => {
 
 
 client.on('message', (message) => {
-    if (message.content.includes(`${client.prefix}${client.serverInfo}`)) {
+    if (message.content.includes(`${client.prefix}${client.commandName}`)) {
         if(!message.content.includes(client.user.id)) return;
         data = client.datassss || {};
 
@@ -27,7 +27,6 @@ client.on('message', (message) => {
                 { name: 'Modded', value: data.Modded ||  "Loading..." },
                 { name: 'Version', value: data.Version || "Loading..." }
             );
-
         message.channel.send(emb);
     };
 });
@@ -39,7 +38,7 @@ client.on('error', (err) => {
 process.on('message', message => {
 
     if (typeof message == 'object' && message.init === true) {
-        client.serverInfo = message.command;
+        client.commandName = message.commandName;
         client.prefix = message.prefix;
         client.login(message.token);
     };

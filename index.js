@@ -63,6 +63,7 @@ global.cmd = {
   },
 };
 
+cmd.info("Support: https://sdbo.kindtech.ru");
 cmd.log("All Modules Loaded!");
 
 function writeLog(text) {
@@ -101,7 +102,7 @@ servers.forEach((server) => {
       init: true,
       online: online,
       token: token,
-      command: config["bot"]["command"],
+      commandName: config["bot"]["commandName"],
       prefix: config["bot"]["prefix"],
     });
 
