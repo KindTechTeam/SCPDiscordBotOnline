@@ -10,7 +10,7 @@ Support: https://sdbo.kindtech.ru/
 
 Показ количества игроков в статусе бота
 
-![alt-statuscount](https://i.imgur.com/pkCTSYxl.png)
+![alt-statuscount](https://i.imgur.com/jqyUORC.png)
 
 Команда `Info @Server#0000`
 
@@ -29,7 +29,7 @@ Support: https://sdbo.kindtech.ru/
 | prefix | string | Префикс бота. Пример: `;` |
 | commandName | string | Название команды `info` |
 | api | object | Объект с настройками api |
-| ApiKey | string | API Ключ. Впиши `!api` в твою консоль сервера |
+| key | string | API Ключ. Впиши `!api` в твою консоль сервера |
 | AccountID | string | Твой AccontID Нати можно в [ServerList](https://servers.scpslgame.com/) |
 | servers | obj | Объект c информацией о серверах |
 | list | array | Массив/Список ваших серверов |
@@ -77,7 +77,7 @@ Functional
 
 Showing the number of players in bot status
 
-![alt-statuscount](https://i.imgur.com/pkCTSYxl.png)
+![alt-statuscount](https://i.imgur.com/jqyUORC.png)
 
 Command `Info @Server#0000`
 
@@ -97,7 +97,7 @@ Settings
 | prefix | string | Bot prefix. Example: `;` |
 | commandName | string | Command name `info` |
 | api | object | Object with settings api |
-| ApiKey | string | API Key. Enter !api in your server console |
+| key | string | API Key. Enter !api in your server console |
 | AccountID | int | Your AccontID. Can be in [ServerList](https://servers.scpslgame.com/) |
 | servers | obj | Object with information about servers |
 | list | array | Array/List of your servers |
