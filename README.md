@@ -25,29 +25,40 @@ Support: https://sdbo.kindtech.ru/
 
 | Option | Type | Description |
 | ------ | ------ | ------ |
-| tokens | array | Токены Ботов |
+| bot | object | Объект с настройками бота |
 | prefix | string | Префикс бота. Пример: `;` |
+| commandName | string | Название команды `info` |
+| api | object | Объект с настройками api |
 | ApiKey | string | API Ключ. Впиши `!api` в твою консоль сервера |
-| AccountID | int | Твой AccontID Нати можно в [ServerList](https://servers.scpslgame.com/) |
-| IP | string | Айпи Твоего сервера |
-| PORTS | array | Порты ваших серверов |
+| AccountID | string | Твой AccontID Нати можно в [ServerList](https://servers.scpslgame.com/) |
+| servers | obj | Объект c информацией о серверах |
+| list | array | Массив/Список ваших серверов |
+| port | int | Порт сервера |
+| token | string | Токен бота |
 ## Пример:
 ```js
 {
-    "tokens": [
-        "NTYzNzA3NAGVADA5NTA2ODI2.SoSi.XuYImWKun-gfaJl7qF2r7_842Ww",
-        "NTc5MjI4MAGVADM2NzI3Mjk3.NaHy.InIdIopjs9BGJiu-gyA0a9rWBog",
-        "NzA1MTI5NAGVAzQ0ODI0OTc2.SoSA.TMChLENDwJ_asr-e5N-zCam52Uk",
-        "NzA1MTI5OAGVATQyMTkxMjA1.MNewL.ENxChbOTOdPRiDyMIVaTuyuJKw",
-        "NzA1MTI5OAGVAzE1MDQyNDM0.AdР8С.E3AdCBG9SB1DAhDSkXt6bdv0ZY",
-        "NzA1MTI5OAGVAjMzNjIxNTQ1.GnaRh.pV5odWuVKbrKWAShKAhdjkACU"],
-    "prefix": ";",
+    "bot": {
+        "prefix": ";",
+        "commandName": "serverInfo"
+    },
 
-    "ApiKey": "DaY69rubLeyPJ",
-    "AccountID": "14280",
+    "api": {
+        "key": " DaY35rubLeyPJ",
+        "AccountID": "32156"
+    },
 
-    "IP": "128.123.52.123",
-    "PORTS": ["7777", "7778", "7779", "7780", "7781", "7782"]
+    "servers": {
+        "list": [
+            { "port": 7777, "token": "NTYzNzA3NAGVADA5NTA2ODI2.SoSi.XuYImWKun-gfaJl7qF2r7_842Ww" },
+            { "port": 7778, "token": "NTc5MjI4MAGVADM2NzI3Mjk3.NaHy.InIdIopjs9BGJiu-gyA0a9rWBog" },
+            { "port": 7779, "token": "NzA1MTI5OAGVAjMzNjIxNTQ1.GnaRh.pV5odWuVKbrKWAShKAhdjkACU" }
+        ]
+    },
+
+    "logs": {
+        "FolderName": "logs"
+    }
 }
 ```
 3. В консоле пишете `npm i`
@@ -82,29 +93,40 @@ Settings
 
 | Option | Type | Description |
 | ------ | ------ | ------ |
-| tokens | array | Bot Tokens |
+| bot | object | Object with bot settings |
 | prefix | string | Bot prefix. Example: `;` |
+| commandName | string | Command name `info` |
+| api | object | Object with settings api |
 | ApiKey | string | API Key. Enter !api in your server console |
 | AccountID | int | Your AccontID. Can be in [ServerList](https://servers.scpslgame.com/) |
-| IP | string | IP of your server |
-| PORTS | array | Ports of your servers |
+| servers | obj | Object with information about servers |
+| list | array | Array/List of your servers |
+| port | int | Server port |
+| token | string | Bot token |
 ## Explame:
 ```js
 {
-    "tokens": [
-        "NTYzNzA3NAGVADA5NTA2ODI2.SoSi.XuYImWKun-gfaJl7qF2r7_842Ww",
-        "NTc5MjI4MAGVADM2NzI3Mjk3.NaHy.InIdIopjs9BGJiu-gyA0a9rWBog",
-        "NzA1MTI5NAGVAzQ0ODI0OTc2.SoSA.TMChLENDwJ_asr-e5N-zCam52Uk",
-        "NzA1MTI5OAGVATQyMTkxMjA1.MNewL.ENxChbOTOdPRiDyMIVaTuyuJKw",
-        "NzA1MTI5OAGVAzE1MDQyNDM0.AdР8С.E3AdCBG9SB1DAhDSkXt6bdv0ZY",
-        "NzA1MTI5OAGVAjMzNjIxNTQ1.GnaRh.pV5odWuVKbrKWAShKAhdjkACU"],
-    "prefix": ";",
+    "bot": {
+        "prefix": ";",
+        "commandName": "serverInfo"
+    },
 
-    "ApiKey": "DaY69rubLeyPJ",
-    "AccountID": "14280",
+    "api": {
+        "key": " DaY35rubLeyPJ",
+        "AccountID": "32156"
+    },
 
-    "IP": "128.123.52.123",
-    "PORTS": ["7777", "7778", "7779", "7780", "7781", "7782"]
+    "servers": {
+        "list": [
+            { "port": 7777, "token": "NTYzNzA3NAGVADA5NTA2ODI2.SoSi.XuYImWKun-gfaJl7qF2r7_842Ww" },
+            { "port": 7778, "token": "NTc5MjI4MAGVADM2NzI3Mjk3.NaHy.InIdIopjs9BGJiu-gyA0a9rWBog" },
+            { "port": 7779, "token": "NzA1MTI5OAGVAjMzNjIxNTQ1.GnaRh.pV5odWuVKbrKWAShKAhdjkACU" }
+        ]
+    },
+
+    "logs": {
+        "FolderName": "logs"
+    }
 }
 ```
 3. In the console, write `npm i`
