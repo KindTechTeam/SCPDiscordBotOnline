@@ -87,7 +87,7 @@ function writeLog(text) {
   fs.appendFileSync(pathname, date + "  " + text + "\n");
 };
 
-// CONSOLE CODE PIE
+// CLIENT CODE PIE
 
 const servers = config["servers"]["list"];
 
@@ -125,7 +125,7 @@ servers.forEach((server) => {
   };
 });
 
-// CONSOLE CODE PIE
+// ONLINE CODE PIE
 
 setInterval(async () => {
   updateOnline();
