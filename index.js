@@ -4,7 +4,6 @@ const chalk = require("chalk");
 const fetch = require("node-fetch");
 const moment = require("moment");
 
-
 const child = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -33,33 +32,36 @@ global.cmd = {
     console.log(
       `[${chalk.hex(cmd.colors.log)("LOG")}] ${chalk.hex(cmd.colors.logText)(params.join(" "))}`
     );
-    writeLog(params.join(" "));
+    writeLog(`[LOG] ${params.join(" ")}`);
+
   },
 
   warn: (...params) => {
     console.log(
       `[${chalk.hex(cmd.colors.warn)("WARN")}] ${chalk.hex(cmd.colors.warnText)(params.join(" "))}`
     );
-    writeLog(`WARN: ${params.join(" ")}`);
+    writeLog(`[WARN] ${params.join(" ")}`);
   },
 
   sys: (...params) => {
     console.log(
       `[${chalk.hex(cmd.colors.sys)("SYSTEM")}] ${chalk.hex(cmd.colors.sysText)(params.join(" "))}`
     );
+    writeLog(`[SYS] ${params.join(" ")}`);
   },
 
   err: (...params) => {
     console.log(
       `[${chalk.hex(cmd.colors.err)("ERROR")}] ${chalk.hex(cmd.colors.errText)(params.join(" "))}`
     );
-    writeLog(`ERROR: ${params.join(" ")}`);
+    writeLog(`[ERROR] ${params.join(" ")}`);
   },
 
   info: (...params) => {
     console.log(
       `[${chalk.hex(cmd.colors.log)("INFO")}] ${chalk.hex(cmd.colors.logText)(params.join(" "))}`
     );
+    writeLog(`[INFO] ${params.join(" ")}`);
   },
 };
 
@@ -72,22 +74,18 @@ function writeLog(text) {
   let pathname = path.join(__dirname, config["logs"]["FolderName"], filename);
 
   if (!fs.existsSync(folder)) {
-    cmd.sys(
-      `[${chalk.hex(cmd.colors.warn)(
-        "WARN"
-      )}] Log folder not found. Creating...`
-    );
     fs.mkdirSync(folder);
+    cmd.sys(`[${chalk.hex(cmd.colors.warn)("WARN")}] Log folder not found. Creating...`)
   };
 
   if (!fs.existsSync(pathname)) {
     fs.writeFileSync(pathname, "\t");
   };
 
-  fs.appendFileSync(pathname, date + "  " + text + "\n");
+  fs.appendFileSync(pathname, `[${date}] ` + text + "\n");
 };
 
-// CLIENT CODE PIE
+// CLIENTSEND CODE PIE
 
 const servers = config["servers"]["list"];
 
@@ -121,11 +119,11 @@ servers.forEach((server) => {
   try {
     initClient(server.token, "0/0");
   } catch (error) {
-    cmd.log(error);
+    cmd.err(error);
   };
 });
 
-// ONLINE CODE PIE
+// FETCH CODE PIE
 
 setInterval(async () => {
   updateOnline();
@@ -146,7 +144,9 @@ async function updateOnline() {
         data: fetched[c],
       });
     });
-  } catch (error) {}
+  } catch (error) {
+    cmd.err(error)
+  }
 }
 
 function fetchOnline() {
@@ -168,9 +168,6 @@ function fetchOnline() {
         out.forEach((server) => {
           cache[server.Port] = server;
         });
-
-        cmd.log(`${chalk.green("FETCHED OK!")}`);
-
         resolve(cache);
       });
   });

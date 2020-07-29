@@ -9,12 +9,8 @@ process.on('exit', () => {
     process.send({ action: 'hello', message: "Bye-bye!" });
 });
 
-
 client.on('message', (message) => {
-    if (message.content.includes(`${client.prefix}${client.commandName}`)) {
-        if(!message.content.includes(client.user.id)) return;
-        data = client.datassss || {};
-
+    if (message.content.startsWith(`${client.prefix}${client.commandName}`) && message.content.includes(client.user.id)) {
         if(!data.FF && data.FF !== false) data.FF = "Loading..";
         if(!data.WL && data.WL !== false) data.WL = "Loading..";
         let emb = new MessageEmbed()
@@ -50,7 +46,7 @@ process.on('message', message => {
     };
 
     if(typeof message == 'object' && message.update === true) {
-        client.datassss = message.data;
+        data = message.data || {};
         client.user.setActivity(`${message.online || '0/0'}`);
     };
 
