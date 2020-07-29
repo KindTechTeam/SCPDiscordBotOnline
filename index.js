@@ -131,7 +131,7 @@ setInterval(async () => {
 
 setTimeout(() => {
   updateOnline();
-}, 3000);
+}, 1000);
 async function updateOnline() {
   let fetched = await fetchOnline();
   try {
@@ -168,6 +168,9 @@ function fetchOnline() {
         out.forEach((server) => {
           cache[server.Port] = server;
         });
+
+        cmd.log("Nice")
+
         resolve(cache);
       });
   });

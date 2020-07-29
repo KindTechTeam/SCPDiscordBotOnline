@@ -10,7 +10,12 @@ process.on('exit', () => {
 });
 
 client.on('message', (message) => {
-    if (message.content.startsWith(`${client.prefix}${client.commandName}`) && message.content.includes(client.user.id)) {
+    args = message.content.slice(client.prefix.length).split(/ +/);
+    let cmd = message.content.split(" ")[0].slice(client.prefix.length).toLowerCase();
+    if (!cmd) return;
+
+    if (cmd == `${client.commandName}` && args[1].includes(client.user.id)) {
+        console.log(client.user.id)
         if(!data.FF && data.FF !== false) data.FF = "Loading..";
         if(!data.WL && data.WL !== false) data.WL = "Loading..";
         let emb = new MessageEmbed()
@@ -24,7 +29,7 @@ client.on('message', (message) => {
                 { name: 'Version', value: data.Version || "Loading..." }
             );
         message.channel.send(emb);
-    };
+    } else return;
 });
 
 client.on('error', (err) => {
