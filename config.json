@@ -1,20 +1,20 @@
 {
     "BOTS": {
-        "globalPrefix": "!",
-        "globalCommand": "sinfo",
+        "globalPrefix": "Prefix",
+        "globalCommand": "CommandName",
         "servers": [
             {
                 "PORT": 7777,
-                "TOKEN": "NTYzNzA3NTE4NDA5NTA2ODI2.XKdPiQ.UO3GI5SIpAmaz-vqdISvST-87aE"
+                "TOKEN": "Token1"
             },
             {
                 "PORT": 7778,
-                "TOKEN": "NTc5MjI4MjE5ODM2NzI3Mjk3.XN_GUQ.gJnhbKmBvp-u1A3wAqB388fExUo"
+                "TOKEN": "Token2"
             }
         ]
     },
     "API": {
-        "KEY": "Rx8HHKv7T9YtLGsM7a8SIbOi",
-        "AccountID": "15772"
+        "KEY": "ApiKey",
+        "AccountID": "AccountID"
     }
 }
