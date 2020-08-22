@@ -1,0 +1,20 @@
+{
+    "BOTS": {
+        "globalPrefix": "!",
+        "globalCommand": "sinfo",
+        "servers": [
+            {
+                "PORT": 7777,
+                "TOKEN": "NTYzNzA3NTE4NDA5NTA2ODI2.XKdPiQ.UO3GI5SIpAmaz-vqdISvST-87aE"
+            },
+            {
+                "PORT": 7778,
+                "TOKEN": "NTc5MjI4MjE5ODM2NzI3Mjk3.XN_GUQ.gJnhbKmBvp-u1A3wAqB388fExUo"
+            }
+        ]
+    },
+    "API": {
+        "KEY": "Rx8HHKv7T9YtLGsM7a8SIbOi",
+        "AccountID": "15772"
+    }
+}
