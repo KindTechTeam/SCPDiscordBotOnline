@@ -38,26 +38,23 @@ Support: https://sdbo.kindtech.ru/
 ## Пример:
 ```js
 {
-    "bot": {
-        "prefix": ";",
-        "commandName": "serverInfo"
-    },
-
-    "api": {
-        "key": " DaY35rubLeyPJ",
-        "AccountID": "32156"
-    },
-
-    "servers": {
-        "list": [
-            { "port": 7777, "token": "NTYzNzA3NAGVADA5NTA2ODI2.SoSi.XuYImWKun-gfaJl7qF2r7_842Ww" },
-            { "port": 7778, "token": "NTc5MjI4MAGVADM2NzI3Mjk3.NaHy.InIdIopjs9BGJiu-gyA0a9rWBog" },
-            { "port": 7779, "token": "NzA1MTI5OAGVAjMzNjIxNTQ1.GnaRh.pV5odWuVKbrKWAShKAhdjkACU" }
+    "BOTS": {
+        "globalPrefix": "!",
+        "globalCommand": "sinfo",
+        "servers": [
+            {
+                "PORT": 7777,
+                "TOKEN": "NTYzNzA3NTE4NDA5NTA2ODI2.PaSh.eAw_LOKmY1KLE8W15VjDL9_8sEY"
+            },
+            {
+                "PORT": 7778,
+                "TOKEN": "NTc5MjI4MjE5ODM2NzI3Mjk3.XNЕ_BuD.-EDm8mSyP0g28nkyHqu5UT7ChWkY"
+            }
         ]
     },
-
-    "logs": {
-        "FolderName": "logs"
+    "API": {
+        "KEY": "Rx8HHTO7TO4n0GsM7a8SIbOi",
+        "AccountID": "15772"
     }
 }
 ```
@@ -106,26 +103,23 @@ Settings
 ## Explame:
 ```js
 {
-    "bot": {
-        "prefix": ";",
-        "commandName": "serverInfo"
-    },
-
-    "api": {
-        "key": " DaY35rubLeyPJ",
-        "AccountID": "32156"
-    },
-
-    "servers": {
-        "list": [
-            { "port": 7777, "token": "NTYzNzA3NAGVADA5NTA2ODI2.SoSi.XuYImWKun-gfaJl7qF2r7_842Ww" },
-            { "port": 7778, "token": "NTc5MjI4MAGVADM2NzI3Mjk3.NaHy.InIdIopjs9BGJiu-gyA0a9rWBog" },
-            { "port": 7779, "token": "NzA1MTI5OAGVAjMzNjIxNTQ1.GnaRh.pV5odWuVKbrKWAShKAhdjkACU" }
+    "BOTS": {
+        "globalPrefix": "!",
+        "globalCommand": "sinfo",
+        "servers": [
+            {
+                "PORT": 7777,
+                "TOKEN": "NTYzNzA3NTE4NDA5NTA2ODI2.PaSh.eAw_LOKmY1KLE8W15VjDL9_8sEY"
+            },
+            {
+                "PORT": 7778,
+                "TOKEN": "NTc5MjI4MjE5ODM2NzI3Mjk3.XNЕ_BuD.-EDm8mSyP0g28nkyHqu5UT7ChWkY"
+            }
         ]
     },
-
-    "logs": {
-        "FolderName": "logs"
+    "API": {
+        "KEY": "Rx8HHTO7TO4n0GsM7a8SIbOi",
+        "AccountID": "15772"
     }
 }
 ```
